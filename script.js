@@ -269,16 +269,9 @@ if (bookingForm) {
         }, submissionCooldownMs);
       })
       .catch(() => {
-        if (window.location.protocol === "file:") {
-          applySanitizedValuesToForm(sanitizedValues);
-          setFormMessage("Opening the secure booking request page...");
-          bookingForm.submit();
-          return;
-        }
-
-        lastBookingSubmissionAt = 0;
-        submitButton.disabled = false;
-        setFormMessage("Sorry, the booking request could not be sent. Please try again.");
+        applySanitizedValuesToForm(sanitizedValues);
+        setFormMessage("Opening the secure booking request page...");
+        bookingForm.submit();
       })
       .finally(() => {
         submitButton.removeAttribute("aria-busy");

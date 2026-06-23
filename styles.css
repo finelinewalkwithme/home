@@ -1040,14 +1040,53 @@ textarea:focus {
 }
 
 @media (max-width: 520px) {
+  .hero {
+    min-height: 100svh;
+    padding: 7.5rem 1rem 4rem;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+    justify-items: center;
+    text-align: center;
+  }
+
   nav {
     width: 100%;
     justify-content: space-between;
   }
 
   h1 {
-    font-size: clamp(2rem, 12vw, 3.7rem);
+    width: min(100%, 11ch);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(2.25rem, 13vw, 3.65rem);
+    letter-spacing: 0.035em;
+    overflow-wrap: anywhere;
+    text-align: center;
     white-space: normal;
+  }
+
+  .seo-intro {
+    width: min(100%, 22rem);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(1.2rem, 5.1vw, 1.45rem);
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+  }
+
+  .hero-actions .art-button {
+    width: min(78vw, 17rem);
   }
 
   .brand {
